@@ -114,7 +114,7 @@ AgentOS is designed to enterprise standards from day one:
 
 ---
 
-## 📬 Work With Benjamin Mast
+## 📬 Work With BlubMa
 
 I build AI infrastructure that generates measurable business outcomes.
 
@@ -126,4 +126,4 @@ If you are evaluating AI strategy implementations, building a local-first agent 
 
 ---
 
-<sub>Built by Benjamin Mast · Maintained by OSAIX · Powered by Antigravity AI · Local-First · Privacy-Native</sub>
+<sub>Built by BlubMa · Maintained by OSAIX · Powered by Antigravity AI · Local-First · Privacy-Native</sub>
