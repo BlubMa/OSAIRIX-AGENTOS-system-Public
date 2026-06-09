@@ -127,6 +127,7 @@ If you are:
 **→ [Reach out via LinkedIn](https://linkedin.com/in/blubma)** or explore the project documentation in this repository.
 
 **→ Business context:** [umsatz-ki-architekten.com](https://umsatz-ki-architekten.com)
+**→ Public GitHub:** [github.com/BlubMa/OSAIX-Public](https://github.com/BlubMa/OSAIX-Public)
 
 ---
 
