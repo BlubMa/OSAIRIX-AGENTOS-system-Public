@@ -124,7 +124,7 @@ If you are:
 - Implementing structured ITIL-compliant AI governance.
 - Looking for a strategic AI architect with a human-centric approach (Wirtschaftspsychologie) — let's connect.
 
-**→ [Reach out via LinkedIn](https://linkedin.com/in/blubma)** or explore the project documentation in this repository.
+**→ [Reach out via LinkedIn](https://linkedin.com/in/benjaminmast)** or explore the project documentation in this repository.
 
 **→ Business context:** [umsatz-ki-architekten.com](https://umsatz-ki-architekten.com)
 **→ Public GitHub:** [github.com/BlubMa/OSAIX-Public](https://github.com/BlubMa/OSAIX-Public)
