@@ -47,6 +47,23 @@ It is not a wrapper around ChatGPT. It is the control system *behind* the AI.
 
 Every layer has a single, enforced purpose. No file lands in the wrong place. Ever.
 
+### 🏗️ Data Flow & Cognitive Architecture
+
+```mermaid
+graph TD
+    Inbound[Inbound Triggers: notes, scrapes, discord] --> Inbox["00_inbox/"]
+    Inbox -- "Wakeup / Cron" --> Core["01_core/ (Orchestration & RMM)"]
+    Core -- "Read / Query" --> Data["02_data/ (agentOS.db, KDBs)"]
+    Core -- "Model Cost Check" --> RMM["Model Routing (Local Edge vs Cloud)"]
+    RMM -- "Assign Task" --> Agents["03_agents/ (SysAs persona & code)"]
+    Agents -- "Single-Writer Queue" --> DBWriter["01_core/scripts/db_writer.py"]
+    DBWriter -- "Commit Data" --> Data
+    Agents -- "Logs & Telemetry" --> Logs["04_logs/"]
+    Agents -- "Execute SOP" --> SOPs["05_sops/"]
+    Agents -- "Output Assets" --> Outputs["06_outputs/"]
+    Outputs -- "Mirror / Sync" --> OneDrive["OneDrive Cloud Mirror (Rsync)"]
+```
+
 ---
 
 ## Core Capabilities
