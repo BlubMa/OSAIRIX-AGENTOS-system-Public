@@ -29,19 +29,20 @@ It is not a wrapper around ChatGPT. It is the control system *behind* the AI.
 
 ---
 
-## Architecture: 8-Layer Cognitive Stack
+## Architecture: 10-Layer Cognitive Stack
 
 ```text
 /AgentOS/
-├── 00_inbox/     ← Unfiltered input: notes, scrapes, triggers
-├── 01_core/      ← System brain: policies, routing logic, hooks
-├── 02_data/      ← Operational truth: SQLite DBs, KDBs, staging
-├── 03_agents/    ← Specialized agent personas & orchestration roles
-├── 04_logs/      ← Telemetry, session journals, hardening tickets
-├── 05_sops/      ← Machine-executable Standard Operating Procedures
-├── 06_outputs/   ← Deliverables: reports, client assets, audit trails
-├── 07_harness/   ← Validation: health checks, fixtures, afk-watchdog
-└── 08_archive/   ← Cold storage: versioned, auditable history
+├── 00_inbox/           ← Unfiltered input: notes, scrapes, triggers
+├── 01_core/            ← System brain: policies, routing logic, hooks
+├── 02_data/            ← Operational truth: SQLite DBs, KDBs, staging
+├── 03_agents/          ← Specialized agent personas & orchestration roles
+├── 04_logs/            ← Telemetry, session journals, hardening tickets
+├── 05_sops/            ← Machine-executable Standard Operating Procedures
+├── 06_outputs/         ← Deliverables: reports, client assets, audit trails
+├── 07_harness/         ← Validation: health checks, fixtures, afk-watchdog
+├── 08_archive/         ← Cold storage: versioned, auditable history
+└── 09_system-services/ ← System integrations, symlinks to repositories & local services
 ```
 
 Every layer has a single, enforced purpose. No file lands in the wrong place. Ever.
@@ -81,7 +82,7 @@ To maintain absolute data separation, service isolation, and code clarity, Agent
 
 1. 📂 **Core System & Database Backend (`OSAIRIX-AGENTOS-system-Privat`)**
    - **Role:** Serves as the central operating system and cognitive coordinator.
-   - **Assets:** Implements the 8-layer cognitive stack (Inbox, Core, Data, Agents, Logs, SOPs, Outputs, Harness, Archive).
+   - **Assets:** Implements the 10-layer cognitive stack (Inbox, Core, Data, Agents, Logs, SOPs, Outputs, Harness, Archive, System Services).
    - **Key Tech:** Single-Writer transaction engine (SQLite queue), Resource Management Module (RMM) for local-first model routing (Apple M3 GPU + LiteRT/Ollama), and the local command center.
    - **Security:** Standardized AI-native pre-commit hooks to block secrets/credential leaks and enforce formatting.
 
