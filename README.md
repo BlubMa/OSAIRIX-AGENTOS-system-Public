@@ -93,6 +93,18 @@ graph TD
 - Session journals auto-generated at every closure with token metrics, model usage, and open loop detection.
 - Hardening tickets (`HT-*`) auto-created for any unresolved system anomalies.
 
+### 🔄 Recent System Updates (June 24, 2026)
+- **Database Consolidation & Unified Memory:** Consolidated operational data out of legacy SQLite databases (`osairix.sqlite3`) and migrated them to the central `agentOS.db` database.
+- **Single-Writer Enforcement:** Re-engineered core system workflows (including `sysa_hub_guardian.py` and `skill_workspace-audit_v1.0.py`) to log and execute exclusively via the Single-Writer database queue (`02_data/queue/incoming/` + `db-writer.sh`), eliminating concurrency conflicts.
+- **Full Ingestion of 7 Core Repositories:** Completed the staged cloning, security gating (`sysa_security_gate.py`), formatting, and indexing of all 7 target repositories under the installations focus bundle:
+  1. `mksglu/context-mode` (Active)
+  2. `obra/superpowers` (Active)
+  3. `garrytan/gstack` (Active)
+  4. `affaan-m/ECC` (Active)
+  5. `ComposioHQ/awesome-claude-skills` (Active)
+  6. `coreyhaines31/marketingskills` (Active)
+  7. `coreyhaines31/cybersecurity-skills` (Active)
+
 ### 🔄 Decoupled Three-Repository System (Architecture Blueprint)
 
 To maintain absolute data separation, service isolation, and code clarity, AgentOS is engineered as a decoupled, multi-repository ecosystem. The code and configuration are divided into three specialized private repositories (physically isolated, functionally mapped, and securely managed):
